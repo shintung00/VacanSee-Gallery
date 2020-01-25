@@ -1,0 +1,24 @@
+{
+  "name": "ht-service",
+  "version": "1.0.0",
+  "description": "Xillow FEC",
+  "main": "schema.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "nodemon schema.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/7-xillow/HT-service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/7-xillow/HT-service/issues"
+  },
+  "homepage": "https://github.com/7-xillow/HT-service#readme",
+  "dependencies": {
+    "mongoose": "^5.8.9",
+    "nodemon": "^2.0.2"
+  }
+}
