@@ -7,8 +7,6 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors",
-    "schema": "node database/schema.js",
-    "seed": "node database/fakeData.js",
     "react-dev": "webpack --watch -d",
     "start": "nodemon server/index.js"
   },

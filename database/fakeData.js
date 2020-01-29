@@ -10,7 +10,7 @@ var randomImagesArray = (num, images) => {
   var result = [];
   var imagesCopy = [...images];
   for (var i = 0; i < num; i++) {
-    var randomNum = Math.floor(Math.random() * imagesCopy.length);
+    var randomNum = Math.floor((Math.random() * 16) + 4);
     result.push(imagesCopy[randomNum]);
     imagesCopy.splice(randomNum, 1); 
   }

@@ -1,12 +1,15 @@
+import React, { Component } from 'react';
+
 class PhotoList extends Component {
   constructor(props) {
     super(props);
-    this.state = {properties: []};
+    this.state = {images: []};
   }
   render() {
     return (
       <div>
-        Howdy worllllld
+        {this.props.images.slice(1).map((image, key) => <img src={image} key={key}/>
+        )}
       </div>
     );
   }

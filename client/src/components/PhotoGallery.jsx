@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import PhotoList from './PhotoList.jsx';
 import LeadingPhoto from './LeadingPhoto.jsx';
+import PhotoList from './PhotoList.jsx';
 
 
 class PhotoGallery extends Component {
@@ -38,7 +38,13 @@ class PhotoGallery extends Component {
   }
 
   render() {
-    return <LeadingPhoto images={this.state.images} />
+    return (
+      <div>
+        <h1>Xill0w</h1>
+        <LeadingPhoto image={this.state.images[0]} />
+        <PhotoList images={this.state.images}/>
+      </div>
+    )
   }
 }
 
