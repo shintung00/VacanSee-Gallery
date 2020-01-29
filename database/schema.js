@@ -47,7 +47,6 @@ let retrieve = (req, res) => {
       console.log(err);
       res.send(err);
     } else {
-      console.log(houses);
       res.send(houses);
     }
   })

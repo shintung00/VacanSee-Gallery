@@ -24,7 +24,6 @@ class PhotoGallery extends Component {
     axios.get('/houses')
       .then((response) => {
         let house = response.data[0];
-        console.log("house is ", house);
         this.setState({
           images: house.images,
           description: house.description,
