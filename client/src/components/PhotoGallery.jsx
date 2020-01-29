@@ -41,7 +41,9 @@ class PhotoGallery extends Component {
     return (
       <div>
         <h1>Xill0w</h1>
+        <a>Leading Photo</a>
         <LeadingPhoto image={this.state.images[0]} />
+        <a>Photo List</a>
         <PhotoList images={this.state.images}/>
       </div>
     )
