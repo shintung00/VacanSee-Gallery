@@ -4,8 +4,13 @@
   "description": "Xillow FEC",
   "main": "schema.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "nodemon schema.js"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage --colors",
+    "schema": "node database/schema.js",
+    "seed": "node database/fakeData.js",
+    "react-dev": "webpack --watch -d",
+    "start": "nodemon server/index.js"
   },
   "repository": {
     "type": "git",
@@ -17,9 +22,39 @@
     "url": "https://github.com/7-xillow/HT-service/issues"
   },
   "homepage": "https://github.com/7-xillow/HT-service#readme",
-  "dependencies": {
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0",
     "axios": "^0.19.2",
+    "babel-loader": "^8.0.6",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "faker": "^4.1.0",
+    "jest": "^25.1.0",
     "mongoose": "^5.8.9",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.15.0",
+    "morgan": "^1.9.1",
+    "mysql": "^2.16.0",
+    "nodemon": "^1.19.2",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1",
+    "serialize-javascript": ">=2.1.1",
+    "styled-components": "^5.0.0"
+  },
+  "jest": {
+    "setupFilesAfterEnv": ["jest-enzyme"],
+    "testEnvironment": "enzyme",
+    "testEnvironmentOptions": {
+      "enzymeAdapter": "react16"
+    }
   }
 }
