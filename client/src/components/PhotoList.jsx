@@ -1,4 +1,15 @@
 import React, { Component } from 'react';
+import PhotoListEntry from './PhotoListEntry.jsx';
+import styled from 'styled-components';
+
+
+const Div = styled.div`
+display: flex;
+width: 420px;
+flex-direction: row;
+flex-wrap: wrap;
+
+`;
 
 class PhotoList extends Component {
   constructor(props) {
@@ -7,10 +18,10 @@ class PhotoList extends Component {
   }
   render() {
     return (
-      <div>
-        {this.props.images.slice(1).map((image, key) => <img src={image} key={key}/>
+      <Div>
+        {this.props.images.slice(1).map((image, key) => <PhotoListEntry src={image} id={key}/>
         )}
-      </div>
+      </Div>
     );
   }
 }

@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 const fakeData = require('./fakeData.js');
-const seedData = fakeData.seedData;
+// const seedData = fakeData.seedData;
 
 //Create a new xillow db and drop if it exists
 mongoose.connect('mongodb://localhost/xillow');
-mongoose.connection.dropDatabase();
+// mongoose.connection.dropDatabase();
 
 //Schema
 let houseSchema = mongoose.Schema({
@@ -18,26 +18,26 @@ let houseSchema = mongoose.Schema({
 let House = mongoose.model('House', houseSchema);
 
 //Save helper function
-let save = (individualHouse) => {
-  var newHouse = House({
-    id: individualHouse.id,
-    address: individualHouse.address,
-    images: individualHouse.images,
-    description: `Price: ${individualHouse.description.price.toString()} bedrooms: ${individualHouse.description.bdrm}  bathrooms: ${individualHouse.description.bthrm} sqft: ${individualHouse.description.sqft}`
-  });
+// let save = (individualHouse) => {
+//   var newHouse = House({
+//     id: individualHouse.id,
+//     address: individualHouse.address,
+//     images: individualHouse.images,
+//     description: `Price: ${individualHouse.description.price.toString()} bedrooms: ${individualHouse.description.bdrm}  bathrooms: ${individualHouse.description.bthrm} sqft: ${individualHouse.description.sqft}`
+//   });
 
-  newHouse.save((err, success) => {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log('House created!');
-    }
-  })
-};
+//   newHouse.save((err, success) => {
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       console.log('House created!');
+//     }
+//   })
+// };
 
 //Seed the mock data
-let sampleHouses = seedData(100);
-sampleHouses.forEach(house => save(house));
+// let sampleHouses = seedData(100);
+// sampleHouses.forEach(house => save(house));
 
 
 //Retrieve helper function

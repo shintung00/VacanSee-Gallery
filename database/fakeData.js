@@ -56,5 +56,5 @@ var seedData = (number) => {
 };
 
 
-module.exports = {seedData: seedData};
+// module.exports = {seedData: seedData};
 

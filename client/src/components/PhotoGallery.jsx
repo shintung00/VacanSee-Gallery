@@ -2,7 +2,18 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import LeadingPhoto from './LeadingPhoto.jsx';
 import PhotoList from './PhotoList.jsx';
+import styled from 'styled-components';
 
+const Div = styled.div`
+display: flex;
+border: solid 5px rgb(183, 10, 10);
+height: 800px;
+width: 420px;
+overflow-y: scroll;
+overflow-x: hidden;
+flex-direction: column;
+cursor: pointer;
+`
 
 class PhotoGallery extends Component {
   constructor(props) {
@@ -38,13 +49,10 @@ class PhotoGallery extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Xill0w</h1>
-        <a>Leading Photo</a>
+      <Div>
         <LeadingPhoto image={this.state.images[0]} />
-        <a>Photo List</a>
         <PhotoList images={this.state.images}/>
-      </div>
+      </Div>
     )
   }
 }
