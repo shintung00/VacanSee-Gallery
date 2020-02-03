@@ -10,7 +10,7 @@ display: flex;
 `;
 
 function PhotoListEntry(props) {
-  return <Image src={props.src} id={props.id}/>;
+  return <Image src={props.src} onClick= {props.toggle} key={props.key}/>;
 }
 
 export default PhotoListEntry;
