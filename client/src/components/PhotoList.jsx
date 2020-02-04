@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
-import PhotoListEntry from './PhotoListEntry.jsx';
+import React from 'react';
 import styled from 'styled-components';
-
 
 const Div = styled.div`
 display: flex;
@@ -18,24 +16,9 @@ border: solid 1px rgb(255,255,255);
 function PhotoList(props) {
   return (
     <Div>
-      {props.remainingImages.map((image, i) => <Image src={image} id={i+1} onClick={() => props.click(event.target.id)}/>)}
+      {props.remainingImages.map((image, i) => <Image src={image} id={i+1} onClick={(event) => props.click(event.target.id)}/>)}
     </Div>
   );
 }
-
-// class PhotoList extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {images: []};
-//   }
-//   render() {
-//     return (
-//       <Div>
-//         {this.props.images.slice(1).map((image, key) => <PhotoListEntry src={image} toggle= {this.props.toggle} key={key}/>
-//         )}
-//       </Div>
-//     );
-//   }
-// }
 
 export default PhotoList;

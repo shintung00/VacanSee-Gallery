@@ -18,7 +18,7 @@ position: absolute;
 
 function PhotoViewer(props) {
   return (
-    <Popout onKeyDown={(event) => props.keypress(event.target.keyCode)}>
+    <Popout>
       <ViewerHeader close={props.close} restart={props.restart} save={props.save} saved={props.saved}/>
       <ViewerCenter next={props.next} previous={props.prev} photo={props.photo} current={props.current + 1} total={props.total} close={props.close}/>
       <ViewerFooter des={props.description}/>

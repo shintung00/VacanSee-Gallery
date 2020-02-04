@@ -1,4 +1,4 @@
-import react from 'react';
+import React from 'react';
 import { shallow } from 'enzyme';
 import PhotoGallery from './PhotoGallery';
 

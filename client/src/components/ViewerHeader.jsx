@@ -47,7 +47,7 @@ display: inline-block;
 outline:0;
 `;
 
-const ContactAgent = styled.button`
+const ScheduleTour = styled.button`
 color: white;
 background-color: rgba(0,106,255,1);
 border: 1px solid rgba(0,106,255,1);
@@ -75,6 +75,7 @@ text-decoration: underline;
 text-align: center;
 border: rgba(0,0,0,0);
 font-size: 16px;
+font-weight: 800;
 cursor: pointer;
 position: absolute;
 top: 6%;
@@ -121,12 +122,12 @@ class ViewerHeader extends React.Component {
     return (
     <HeaderContainer>
       <PhotosTab onClick={this.props.restart}>Photos</PhotosTab>
-      <ContactAgent onClick={(event) => this.formClick(event.target.id)} id="Share">Contact Agent</ContactAgent>
+      <ScheduleTour onClick={(event) => this.formClick(event.target.id)} id="schedule">Schedule Tour</ScheduleTour>
       <SaveHome onClick={this.props.save}>{this.props.saved ? '♥ Home Saved': '♡ Save Home'}</SaveHome>
-
-      <ShareHouse onClick={(event) => this.formClick(event.target.id)} id="Share">✉️ Share</ShareHouse>
+      <ShareHouse onClick={(event) => this.formClick(event.target.id)} id="schedule">✉️ Share</ShareHouse>
       <Exit onClick={this.props.close}>X</Exit>
-    {this.state.activeForm === "Share" && <ShareForm close={this.closePopout}></ShareForm>}
+    {this.state.activeForm === "schedule" && <ShareForm close={this.closePopout} />}
+    {/* {this.state.activeForm === "schedule" && <ScheduleForm close={this.closePopout}/>} */}
     </HeaderContainer>
     
     )

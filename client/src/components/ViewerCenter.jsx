@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const CenterPic = styled.div`
@@ -27,8 +27,6 @@ z-index: 4
 // left: 25%;
 // position: absolute;
 // text-align: center;
-
-//center center no-repeat
 
 const Next = styled.button`
 color: white;

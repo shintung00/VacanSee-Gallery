@@ -79,28 +79,25 @@ class MainContainer extends Component {
 
   togglePopout() {
     this.setState({ popout: true });
+    document.body.addEventListener('keydown', this.handleKeyDown);
   }
 
   closePopout() {
     this.setState({ popout: false, selectedPic: '' });
+    document.body.removeEventListener('keydown', this.handleKeyDown);
   }
 
   saveHouse() {
     this.setState({ saved:!this.state.saved });
   }
 
-  handleKeyDown(e) {
-    //right key
-    if (e === 39) {
+  handleKeyDown(event) {
+    if (event.keyCode === 39) {
       this.nextPic();
-    } else if (e === 37) {
+    } else if (event.keyCode === 37) {
       this.prevPic();
     }
   }
-
-  // togglePortal() {
-  //   this.setState({ isPortalOpen: !this.state.isPortalOpen });
-  // }
 
   imageClick(number) {
     this.togglePopout();
@@ -130,8 +127,8 @@ class MainContainer extends Component {
         <GalleryContainer>
           <PhotoGallery images={this.state.images} click={this.imageClick} />
         </GalleryContainer>
-        {this.state.popout &&  (<PhotoViewerContainer>
-          <PhotoViewer save={this.saveHouse} saved={this.state.saved} keypress={this.handleKeyDown} photo={this.state.images[this.state.selectedPic]} close={this.closePopout} next={this.nextPic} prev={this.prevPic} description={this.state.description} total={this.state.imageCount} current={this.state.selectedPic} restart={this.restartGallery}/>
+        {this.state.popout && (<PhotoViewerContainer>
+          <PhotoViewer save={this.saveHouse} saved={this.state.saved} photo={this.state.images[this.state.selectedPic]} close={this.closePopout} next={this.nextPic} prev={this.prevPic} description={this.state.description} total={this.state.imageCount} current={this.state.selectedPic} restart={this.restartGallery}/>
           </PhotoViewerContainer>)}
       </MasterDiv>
     );

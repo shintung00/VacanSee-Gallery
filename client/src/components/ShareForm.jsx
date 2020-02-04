@@ -5,7 +5,7 @@ const PopOutShare = styled.form`
 z-index: 3; 
 `
 
-class ShareForm extends React.Component {
+class ShareForm extends Component {
   constructor(props) {
     super(props);
     this.state = {value: ''};
