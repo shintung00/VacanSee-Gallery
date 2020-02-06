@@ -13,7 +13,6 @@ const GalleryContainer = styled.div`
 display: flex;
 height: 100%;
 width: 620px;
-left: 180px;
 overflow: scroll;
 flex-direction: column;
 position: absolute;
@@ -43,7 +42,7 @@ class MainContainer extends Component {
       saved: false,
     };
     this.retrieveImages = this.retrieveImages.bind(this);
-    this.togglePopout = this.togglePopout.bind(this);
+    this.viewerPopout = this.viewerPopout.bind(this);
     this.imageClick = this.imageClick.bind(this);
     this.closePopout = this.closePopout.bind(this);
     this.nextPic = this.nextPic.bind(this);
@@ -77,7 +76,7 @@ class MainContainer extends Component {
     }
   }
 
-  togglePopout() {
+  viewerPopout() {
     this.setState({ popout: true });
     document.body.addEventListener('keydown', this.handleKeyDown);
   }
@@ -99,9 +98,9 @@ class MainContainer extends Component {
     }
   }
 
-  imageClick(number) {
-    this.togglePopout();
-    this.setState({ selectedPic: parseInt(number) });
+  imageClick(event) {
+    this.viewerPopout();
+    this.setState({ selectedPic: parseInt(event.target.id) });
   }
 
   retrieveImages() {

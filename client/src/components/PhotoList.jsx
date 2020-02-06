@@ -16,7 +16,7 @@ border: solid 1px rgb(255,255,255);
 function PhotoList(props) {
   return (
     <Div>
-      {props.remainingImages.map((image, i) => <Image src={image} id={i+1} onClick={(event) => props.click(event.target.id)}/>)}
+      {props.remainingImages.map((image, i) => <Image src={image} id={i+1} onClick={props.click}/>)}
     </Div>
   );
 }

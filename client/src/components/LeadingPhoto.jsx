@@ -13,7 +13,7 @@ display: flex;
 
 function LeadingPhoto(props) {
   return (
-    <Img src={props.image} id={0} onClick={(event) => props.click(event.target.id)} alt="I heart Alex" />
+    <Img src={props.image} id={0} onClick={props.click} alt="I heart Alex" />
   );
 }
 

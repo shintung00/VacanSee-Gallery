@@ -14,4 +14,4 @@ import ReactDOM from 'react-dom';
 import MainContainer from './components/MainContainer.jsx';
 
 
-ReactDOM.render(<MainContainer/>, document.getElementById('app'));
+ReactDOM.render(<MainContainer/>, document.getElementById('Photos'));
