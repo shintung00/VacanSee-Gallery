@@ -8,7 +8,8 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors",
     "react-dev": "webpack --watch -d",
-    "start": "nodemon server/index.js"
+    "start": "nodemon server/index.js",
+    "seedDB": "node database/fakeData.js"
   },
   "repository": {
     "type": "git",
