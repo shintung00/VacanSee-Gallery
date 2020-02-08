@@ -8,6 +8,8 @@ const Popout = styled.div`
 background-color: rgba(0,0,0,0.85);
 height: 100%;
 width: 100%;
+left: 0px;
+height: 0px;
 overflow-y: hidden;
 overflow-x: hidden;
 flex-direction: column;
