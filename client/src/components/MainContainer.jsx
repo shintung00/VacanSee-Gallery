@@ -11,11 +11,10 @@ width: 100%;
 
 const GalleryContainer = styled.div`
 display: flex;
-height: 100%;
+height: ${innerHeight - 12}px;
 width: 620px;
-overflow: scroll;
+overflow-y: scroll;
 flex-direction: column;
-position: absolute;
 cursor: pointer;
 `;
 
