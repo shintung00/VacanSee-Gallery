@@ -42,7 +42,7 @@ const save = (individualHouse) => {
 
 // Retrieve helper function
 const retrieve = (req, res) => {
-  House.find({}, (err, houses) => {
+  House.find({}).limit(1).exec((err, houses) => {
     if (err) {
       console.log(err);
       res.send(err);

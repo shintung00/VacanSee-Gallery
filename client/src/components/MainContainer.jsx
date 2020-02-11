@@ -109,6 +109,7 @@ class MainContainer extends Component {
     axios.get('/houses')
       .then((response) => {
         const house = response.data[0];
+        console.log(house);
         this.setState({
           images: house.images,
           description: house.description,
